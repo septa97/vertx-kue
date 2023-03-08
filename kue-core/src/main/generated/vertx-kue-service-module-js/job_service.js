@@ -423,19 +423,19 @@ var JobService = function(j_val) {
 
 JobService._jclass = utils.getJavaClass("io.vertx.blueprint.kue.service.JobService");
 JobService._jtype = {
-  accept: function (obj) {
+  accept: function(obj) {
     return JobService._jclass.isInstance(obj._jdel);
   },
-  wrap: function (jdel) {
+  wrap: function(jdel) {
     var obj = Object.create(JobService.prototype, {});
     JobService.apply(obj, arguments);
     return obj;
   },
-  unwrap: function (obj) {
+  unwrap: function(obj) {
     return obj._jdel;
   }
 };
-JobService._create = function (jdel) {
+JobService._create = function(jdel) {
   var obj = Object.create(JobService.prototype, {});
   JobService.apply(obj, arguments);
   return obj;
@@ -444,8 +444,8 @@ JobService._create = function (jdel) {
  Factory method for creating a {@link JobService} instance.
 
  @memberof module:vertx-kue-service-module-js/job_service
- @param vertx {Vertx} Vertx instance
- @param config {Object} configuration
+ @param vertx {Vertx} Vertx instance 
+ @param config {Object} configuration 
  @return {JobService} the new {@link JobService} instance
  */
 JobService.create = function(vertx, config) {
@@ -460,8 +460,8 @@ JobService.create = function(vertx, config) {
  This is useful for doing RPCs.
 
  @memberof module:vertx-kue-service-module-js/job_service
- @param vertx {Vertx} Vertx instance
- @param address {string} event bus address of RPC
+ @param vertx {Vertx} Vertx instance 
+ @param address {string} event bus address of RPC 
  @return {JobService} the new {@link JobService} service proxy
  */
 JobService.createProxy = function(vertx, address) {
